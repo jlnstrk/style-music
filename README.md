@@ -9,7 +9,8 @@ Designed by Gabriel Zegarra, developed by [me](https://github.com/julianostarek)
   <img alt="Get it on Google Play"
        src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" height="60"/>
 </a>
+(Link is not working yet, but will soon!)
 
-## Issues
+## Issues (Not until release on Google Play)
 
 Select the "Issues" tab and press "New issue". Try to be as clear as possible, provide additional information such as screenshots and logs, use correct english and stay on topic. Off-topic or non-english/understandable issues will be closed immediately.
