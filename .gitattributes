@@ -1,6 +1,7 @@
 .gitignore merge=ours
 build.gradle merge=ours
 gradle.properties merge=ours
+settings.gradle merge=ours
 app/build.gradle merge=ours
 app/google-services.json merge=ours
 app/proguard-rules.pro merge=ours
