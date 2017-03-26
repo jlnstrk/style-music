@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2017 Julian Ostarek
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="de.julianostarek.music">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
+
+    <permission-group android:name="android.permission-group.STORAGE" />
+
+    <supports-screens
+        android:largeScreens="false"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="false" />
+
+    <application
+        android:name=".StyleMusic"
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:resizeableActivity="false"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activities.MainActivity"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.MUSIC_PLAYER" />
+
+                <category android:name="android.intent.category.APP_MUSIC" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="audio/*" />
+                <data android:mimeType="application/ogg" />
+                <data android:mimeType="application/x-ogg" />
+                <data android:mimeType="application/itunes" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity>
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:parentActivityName=".activities.MainActivity"
+            android:theme="@style/AppTheme.IgnoreSystemBars">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.AlbumActivity"
+            android:parentActivityName=".activities.MainActivity"
+            android:theme="@style/ItemDetailTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
+
+        <service
+            android:name=".lastfm.ArtistMetadataService"
+            android:enabled="true" />
+
+        <activity
+            android:name=".activities.ArtistActivity"
+            android:parentActivityName=".activities.MainActivity"
+            android:theme="@style/ItemDetailTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.SearchActivity"
+            android:parentActivityName=".activities.MainActivity"
+            android:theme="@style/AppTheme.IgnoreSystemBars"
+            android:windowSoftInputMode="adjustNothing">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.PlaylistActivity"
+            android:parentActivityName=".activities.MainActivity"
+            android:theme="@style/ItemDetailTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="de.julianostarek.music.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.FavoritesDetailActivity"
+            android:theme="@style/GenericDetailTheme" />
+        <activity
+            android:name=".activities.FindStationForSongActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/FindStationForSongTheme" />
+        <activity
+            android:name=".activities.AppIntroActivity"
+            android:label="Intro"
+            android:theme="@style/Theme.Intro" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="b03a0a0a615a12c338d58a84c5638aca8391771e" />
+        <meta-data
+            android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME"
+            android:value="mobile.substance.sdk.music.playback.cast.CastOptionsProvider" />
+
+        <activity
+            android:name=".activities.AboutActivity"
+            android:label="@string/about"
+            android:theme="@style/AboutTheme" />
+
+        <service
+            android:name=".StyleMusicService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.media.browse.MediaBrowserService" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name=".provider.RadioStore"
+            android:authorities="de.julianostarek.music.radio"
+            android:enabled="true"
+            android:exported="false"
+            android:icon="@mipmap/ic_launcher"
+            android:label="Style Music Radio Provider"
+            android:readPermission="android.permission.READ_EXTERNAL_STORAGE"
+            android:writePermission="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+        <activity
+            android:name=".activities.CreatePlaylistActivity"
+            android:theme="@style/CreatePlaylistTheme"
+            android:windowSoftInputMode="stateVisible|adjustNothing" />
+    </application>
+
+</manifest>

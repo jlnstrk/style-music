@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2017 Julian Ostarek
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/pref_category_general">
+
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/start_page"
+            android:entryValues="@array/start_page_keys"
+            android:key="@string/pref_key_start_page"
+            android:summary="%s"
+            android:title="@string/start_page_title" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:title="@string/artist_metadata"
+            android:key="@string/pref_key_artist_metadata" />
+
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/allowed_network_type"
+            android:entryValues="@array/allowed_network_type_keys"
+            android:key="@string/pref_key_allowed_network_type"
+            android:summary="%s"
+            android:title="@string/allowed_network_type_title" />
+
+        <ListPreference
+            android:defaultValue="4"
+            android:entries="@array/lastfm_image_size"
+            android:entryValues="@array/lastfm_image_size_keys"
+            android:key="@string/pref_key_lastfm_image_size"
+            android:summary="%s"
+            android:title="@string/lastfm_image_size_title" />
+
+        <Preference
+            android:title="@string/wipe_artists_db"
+            android:summary="@string/wipe_artists_db_sum"
+            android:key="@string/pref_key_wipe_artists_db" />
+
+        <Preference
+            android:title="@string/wipe_playlist_db"
+            android:summary="@string/wipe_playlist_db_sum"
+            android:key="@string/pref_key_wipe_playlists_db" />
+
+        <Preference
+            android:title="@string/wipe_radio_db"
+            android:summary="@string/wipe_radio_db_sum"
+            android:key="@string/pref_key_wipe_radio_db" />
+
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_category_ui">
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:title="@string/small_screen_mode"
+            android:summary="@string/small_screen_mode_sum"
+            android:key="@string/pref_key_small_screen_mode" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:title="@string/lockscreen_album_art"
+            android:summary="@string/lockscreen_album_art_sum"
+            android:key="@string/pref_key_lockscreen_album_art" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:title="@string/lockscreen_album_art_blur"
+            android:key="@string/pref_key_lockscreen_album_art_blur" />
+
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/playback">
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:title="@string/gapless_playback"
+            android:summary="@string/gapless_playback_sum"
+            android:key="@string/pref_key_gapless_playback" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

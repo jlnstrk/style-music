@@ -1,0 +1,144 @@
+<?xml version="1.0"?><!--
+  ~ Copyright 2017 Julian Ostarek
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string name="app_name">Style Music</string>
+    <string name="app_description">La manera d\'escoltar música més innovadora i bonica</string>
+    <!-- General -->
+    <string name="unknown">Desconegut</string>
+    <string name="favorites">Preferits</string>
+    <string name="minutes">Minuts</string>
+    <string name="all">Tot</string>
+    <string name="no_network">No hi ha Connexió a Internet!</string>
+    <string name="tag_editor">Editor d\'Etiquetes</string>
+    <string name="Links">Enllaços Addicionals</string>
+    <string name="please_wait">Si us plau espera</string>
+    <string name="last_added">Últimes Afegides</string>
+    <string name="most_played">Més reproduït</string>
+    <string name="name">Nom</string>
+    <string name="link">Enllaç</string>
+    <string name="results">Resultats</string>
+    <string name="loading">Carregant...</string>
+    <string name="empty_text">No en tens cap</string>
+    <!-- Search -->
+    <string name="search_input_hint">Cercar a la teva biblioteca</string>
+    <string name="search_motivation">Comença a buscar per obtenir resultats</string>
+    <!-- Section names -->
+    <string name="home">Inici</string>
+    <string name="library">Biblioteca</string>
+    <string name="folders">Carpetes</string>
+    <string name="other">Altre</string>
+    <string name="about">Quant a</string>
+    <string name="support">Suporta al desenvolupament de l\'aplicació</string>
+    <string name="settings">Preferències</string>
+    <!-- General actions -->
+    <string name="dismiss">Omet</string>
+    <string name="ok">D\'acord</string>
+    <string name="search">Buscar</string>
+    <string name="add">Afegir</string>
+    <string name="cancel">Cancel·lar</string>
+    <string name="create">Crear</string>
+    <string name="more">Més</string>
+    <string name="voice_input">Entrada de veu</string>
+    <string name="add_to_favorites">Afegir als Preferits</string>
+    <string name="remove_from_favorites">Eliminar dels preferits</string>
+    <string name="save">Guardar</string>
+    <string name="add_image">Afegir una imatge</string>
+    <string name="image_added">Imatge afegida</string>
+    <!-- Radio -->
+    <string name="saving_station">Guardant l\'estació</string>
+    <string name="station_saved">Estació guardada</string>
+    <string name="problem_saving_station">Hi ha hagut un problema guardant aquesta estació</string>
+    <string name="nearby">A prop</string>
+    <string name="radio">Ràdio</string>
+    <string name="add_station">Afegir una estació personalitzada</string>
+    <string name="add_station_text">Posa un nom i un enllaç per la nova estació</string>
+    <string name="search_stations">Cerca estacions</string>
+    <string name="custom_station">Per enllaç</string>
+    <string name="saved">Guardat</string>
+    <string name="no_stations_saved">No hi han estacions guardades</string>
+    <!-- Playlists -->
+    <string name="add_to_playlist">Afegir a la Llista de Reproducció</string>
+    <string name="new_playlist">Nova Llista de Reproducció</string>
+    <string name="new_playlist_desc">Posa un nom per la nova Llista de Reproducció</string>
+    <string name="playlists">Llistes de Reproducció</string>
+    <!-- Albums -->
+    <string name="show_album">Mostra l\'àlbum</string>
+    <string name="albums">Àlbums</string>
+    <!-- Artists -->
+    <string name="show_artist">Mostra l\'artista</string>
+    <string name="no_biography">No hi ha biografia per aquest artista</string>
+    <string name="artist_about">Quant a</string>
+    <string name="bio">Biografia</string>
+    <string name="artists">Artistes</string>
+    <!-- Songs -->
+    <string name="tracks">Pistes</string>
+    <string name="songs">Cançons</string>
+    <!-- Playlists -->
+    <string name="rename_playlist">Canvia el nom a la Llista de Reproducció</string>
+    <string name="change_image">Canvia la imatge</string>
+    <!-- Queue -->
+    <string name="play_next">Reprodueix la Següent</string>
+    <string name="add_to_queue">Afegir a la cua</string>
+    <string name="nothing_up_next">Res a Continuació</string>
+    <string name="up_next">A Continuació</string>
+    <string name="playing">Reproduïnt</string>
+    <string name="queue">Cua</string>
+    <!-- Playback -->
+    <string name="connecting">Connectant</string>
+    <string name="connecting_device">Connectant al dispositiu de transmissió</string>
+    <string name="share_this_track">Comparteix aquesta Pista</string>
+    <string name="google_cast">Google Cast</string>
+    <string name="play">Reproduïr</string>
+    <string name="shuffle">Aleatori</string>
+    <!-- About section -->
+    <string name="google_plus">Google+</string>
+    <string name="github">Github</string>
+    <string name="designer">Dissenyador</string>
+    <string name="developer">Desenvolupador</string>
+    <string name="created_by">Creat per</string>
+    <string name="website">Pàgina web</string>
+    <string name="thanks_to">Gràcies a</string>
+    <string name="licenses">Llicències</string>
+    <string name="everything_else">Totes les altres coses</string>
+    <!-- Settings -->
+    <string name="start_page_title">Pàgina d\'inici</string>
+    <string-array name="start_page">
+        <item>Inici</item>
+        <item>Biblioteca</item>
+        <item>Carpetes</item>
+    </string-array>
+    <string name="allowed_network_type_title">Tipus de connexió permès</string>
+    <string-array name="allowed_network_type">
+        <item>Wifi</item>
+        <item>Celular</item>
+        <item>Wifi + celular</item>
+    </string-array>
+    <string name="lastfm_image_size_title">Mida de la imatge de Last.fm</string>
+    <string name="wipe_playlist_db">Esborrar la base de dades d\'imatges de les llistes de reproducció</string>
+    <string name="wipe_playlist_db_sum">Això no suprimirà les teves imatges</string>
+    <string name="wipe_artists_db">Esborrar la base de dades d\'imatges i biografies d\'artistes</string>
+    <string name="wipe_artists_db_sum">Això eliminarà les imatges i biografies descarregades</string>
+    <string name="wipe_radio_db">Esborrar la base de dades de ràdio</string>
+    <string name="wipe_radio_db_sum">Això eliminarà les estacions guardades i les seves imatges</string>
+    <string name="pref_category_general">General</string>
+    <string name="pref_category_ui">Interfície</string>
+    <!-- Permissions -->
+    <string name="storage_permission">Permís d\'emmagatzematge</string>
+    <string name="storage_permission_reason">Style Music ha de tenir permís d\'emmagatzematge per poder llistar i reproduir la teva música</string>
+    <string name="find_station_for_song">Troba una estació que reprodueixi la teva cançó</string>
+    <string name="artist">Artista</string>
+</resources>

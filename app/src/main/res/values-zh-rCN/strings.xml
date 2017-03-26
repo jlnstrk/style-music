@@ -1,0 +1,131 @@
+<?xml version="1.0"?><!--
+  ~ Copyright 2017 Julian Ostarek
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string name="app_name">Style Music</string>
+    <string name="app_description">美观精致的音乐播放器</string>
+    <!-- General -->
+    <string name="unknown">未知</string>
+    <string name="favorites">收藏夹</string>
+    <string name="minutes">分钟</string>
+    <string name="all">全部</string>
+    <string name="no_network">网络连接不可用！</string>
+    <string name="tag_editor">标签编辑器</string>
+    <string name="Links">额外链接</string>
+    <string name="please_wait">请稍候</string>
+    <string name="last_added">最近添加</string>
+    <string name="most_played">最常播放</string>
+    <string name="name">名称</string>
+    <string name="link">链接</string>
+    <string name="results">结果</string>
+    <string name="loading">加载中…</string>
+    <string name="empty_text">你没有任何</string>
+    <!-- Search -->
+    <string name="search_input_hint">在曲库中搜索</string>
+    <string name="search_motivation">开始搜索</string>
+    <!-- Section names -->
+    <string name="home">主页</string>
+    <string name="library">曲库</string>
+    <string name="folders">文件夹</string>
+    <string name="other">其他</string>
+    <string name="about">关于</string>
+    <string name="support">支持开发者</string>
+    <string name="settings">设置</string>
+    <!-- General actions -->
+    <string name="dismiss">取消</string>
+    <string name="ok">确定</string>
+    <string name="search">搜索</string>
+    <string name="add">添加</string>
+    <string name="cancel">取消</string>
+    <string name="create">创建</string>
+    <string name="more">更多</string>
+    <string name="voice_input">语音输入</string>
+    <string name="add_to_favorites">加入收藏夹</string>
+    <string name="remove_from_favorites">移出收藏夹</string>
+    <string name="save">保存</string>
+    <string name="add_image">添加图片</string>
+    <string name="image_added">图片已添加</string>
+    <!-- Radio -->
+    <string name="saving_station">保存电台</string>
+    <string name="station_saved">电台已保存</string>
+    <string name="problem_saving_station">无法保存电台</string>
+    <string name="nearby">附近</string>
+    <string name="radio">收音机</string>
+    <string name="add_station">创建自定义电台</string>
+    <string name="add_station_text">为新电台添加名称与链接</string>
+    <string name="search_stations">搜索电台</string>
+    <string name="custom_station">通过链接</string>
+    <string name="saved">已保存</string>
+    <string name="no_stations_saved">电台未保存</string>
+    <!-- Playlists -->
+    <string name="add_to_playlist">加入播放列表</string>
+    <string name="new_playlist">新建播放列表</string>
+    <string name="new_playlist_desc">为新列表添加名称</string>
+    <string name="playlists">播放列表</string>
+    <!-- Albums -->
+    <string name="show_album">显示专辑</string>
+    <string name="albums">专辑</string>
+    <!-- Artists -->
+    <string name="show_artist">显示艺术家</string>
+    <string name="no_biography">无艺术家简介</string>
+    <string name="artist_about">关于</string>
+    <string name="bio">简介</string>
+    <string name="artists">艺术家</string>
+    <!-- Songs -->
+    <string name="tracks">曲目</string>
+    <string name="songs">歌曲</string>
+    <!-- Playlists -->
+    <string name="rename_playlist">重命名播放列表</string>
+    <string name="change_image">更改图片</string>
+    <!-- Queue -->
+    <string name="play_next">播放下一曲</string>
+    <string name="add_to_queue">加入队列</string>
+    <string name="nothing_up_next">队列已空</string>
+    <string name="up_next">下一首</string>
+    <string name="playing">正在播放</string>
+    <string name="queue">队列</string>
+    <!-- Playback -->
+    <string name="connecting_device">正在连接 Cast 设备</string>
+    <string name="google_cast">Google Cast</string>
+    <string name="play">播放</string>
+    <string name="shuffle">随机</string>
+    <!-- About section -->
+    <string name="google_plus">Google+</string>
+    <string name="github">Github</string>
+    <string name="designer">设计师</string>
+    <string name="developer">开发者</string>
+    <string name="website">网站</string>
+    <string name="thanks_to">感谢</string>
+    <string name="licenses">许可证</string>
+    <!-- Settings -->
+    <string name="start_page_title">起始页</string>
+    <string-array name="start_page">
+        <item>主页</item>
+        <item>曲库</item>
+        <item>文件夹</item>
+    </string-array>
+    <string-array name="allowed_network_type">
+        <item>WiFi</item>
+        <item>移动数据</item>
+        <item>Wifi + 移动数据</item>
+    </string-array>
+    <string name="lastfm_image_size_title">Last.fm 图片大小</string>
+    <string name="wipe_playlist_db_sum">这将不会删除你的图片</string>
+    <string name="pref_category_ui">用户界面</string>
+    <!-- Permissions -->
+    <string name="storage_permission">存储权限</string>
+    <string name="artist">艺术家</string>
+</resources>

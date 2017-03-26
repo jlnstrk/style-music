@@ -1,0 +1,85 @@
+<!--
+  ~ Copyright 2017 Julian Ostarek
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false">
+
+    <android.support.design.widget.AppBarLayout
+        android:clipChildren="false"
+        android:background="@android:color/transparent"
+        android:transitionGroup="false"
+        android:id="@+id/activity_item_detail_appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:elevation="0dp">
+
+        <FrameLayout
+            android:transitionGroup="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll">
+
+            <de.julianostarek.music.views.VerticalSquareImageView
+                android:transitionName="@string/transition_name_image"
+                android:id="@+id/activity_item_detail_appbar_image"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/activity_item_detail_image_gradient_top"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_gravity="top"
+                android:src="@drawable/gradient_top" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/activity_item_detail_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </FrameLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:transitionGroup="false"
+        android:clipChildren="false"
+        android:id="@+id/activity_item_detail_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/activity_item_detail_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:scaleX="0.0"
+        android:scaleY="0.0"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:fabSize="normal"
+        app:layout_anchor="@+id/activity_item_detail_appbar_layout"
+        app:layout_anchorGravity="end|bottom" />
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,8 @@
+.gitignore merge=ours
+build.gradle merge=ours
+gradle.properties merge=ours
+app/build.gradle merge=ours
+app/google-services.json merge=ours
+app/proguard-rules.pro merge=ours
+app/libs/mfb_library.aar merge=ours
+app/libs/radio_library.aar merge=ours

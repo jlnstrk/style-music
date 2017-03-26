@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2017 Julian Ostarek
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/item_voice_input"
+        android:icon="@drawable/ic_keyboard_voice_black_24dp"
+        android:orderInCategory="100"
+        android:title="@string/voice_input"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/item_radio_nearby"
+        android:icon="@drawable/ic_place_black_24dp"
+        android:orderInCategory="200"
+        android:title="@string/nearby"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/item_custom_station"
+        android:icon="@drawable/ic_link_black_24dp"
+        android:orderInCategory="300"
+        android:title="@string/custom_station"
+        app:showAsAction="ifRoom" />
+
+</menu>

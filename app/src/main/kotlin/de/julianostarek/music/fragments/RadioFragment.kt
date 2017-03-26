@@ -1,0 +1,78 @@
+/*
+ * Copyright 2017 Julian Ostarek
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package de.julianostarek.music.fragments
+
+import android.app.Activity
+import android.content.Intent
+import android.database.Cursor
+import android.os.Bundle
+import android.speech.RecognizerIntent
+import android.support.v4.app.Fragment
+import android.support.v4.app.LoaderManager
+import android.support.v4.content.CursorLoader
+import android.support.v4.content.Loader
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import de.julianostarek.music.BuildConfig
+import de.julianostarek.music.adapters.RadioStationsAdapter
+import de.julianostarek.music.anko.fragments.RadioUI
+import de.julianostarek.music.lib.radio.RadioAPI
+import de.julianostarek.music.provider.RadioStore
+import org.jetbrains.anko.AnkoContext
+
+
+class RadioFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor> {
+    lateinit var UI: RadioUI
+        private set
+    val api: RadioAPI = RadioAPI(BuildConfig.DARFM_KEY)
+
+    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        UI = RadioUI(api)
+        return UI.createView(AnkoContext.create(activity, this))
+    }
+
+    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        loaderManager.initLoader(0, null, this).forceLoad()
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == RadioUI.SPEECH_RECOGNITION_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
+            UI.floatingSearchView.setSearchText(data!!.getStringArrayListExtra(
+                    RecognizerIntent.EXTRA_RESULTS)[0])
+            UI.onSearchAction(data.getStringArrayListExtra(
+                    RecognizerIntent.EXTRA_RESULTS)[0])
+        }
+    }
+
+    override fun onLoaderReset(loader: Loader<Cursor>?) {
+
+    }
+
+    override fun onCreateLoader(id: Int, args: Bundle?): Loader<Cursor> {
+        return CursorLoader(activity, RadioStore.CONTENT_URI, null, null, null, null)
+    }
+
+    override fun onLoadFinished(loader: Loader<Cursor>?, data: Cursor?) {
+        (UI.recyclerView.adapter as RadioStationsAdapter).onDataSetChanged(data!!)
+    }
+
+}
+
+

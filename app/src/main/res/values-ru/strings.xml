@@ -1,0 +1,121 @@
+<?xml version="1.0"?><!--
+  ~ Copyright 2017 Julian Ostarek
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string name="app_name">Style Music</string>
+    <string name="app_description">Свежий и красивый путь наслаждаться любимой музыкой</string>
+    <!-- General -->
+    <string name="unknown">Неизвестно</string>
+    <string name="favorites">Избранное</string>
+    <string name="minutes">Минуты</string>
+    <string name="all">Все</string>
+    <string name="no_network">Нет интернет-соединения!</string>
+    <string name="tag_editor">Редактор тегов</string>
+    <string name="Links">Дополнительные ссылки</string>
+    <string name="please_wait">Пожалуйста, подождите</string>
+    <string name="last_added">Последние добавленные</string>
+    <string name="name">Имя</string>
+    <string name="link">Ссылка</string>
+    <string name="results">Результаты</string>
+    <string name="loading">Загрузка...</string>
+    <string name="empty_text">У вас ничего нет</string>
+    <!-- Search -->
+    <string name="search_input_hint">Поиск по Библиотеке</string>
+    <string name="search_motivation">Начать поиск для получения результатов</string>
+    <!-- Section names -->
+    <string name="home">Главная</string>
+    <string name="library">Библиотека</string>
+    <string name="folders">Папки</string>
+    <string name="other">Другое</string>
+    <string name="about">О приложении</string>
+    <string name="support">Поддержать разработку</string>
+    <string name="settings">Настройки</string>
+    <!-- General actions -->
+    <string name="dismiss">Отклонить</string>
+    <string name="ok">ОК</string>
+    <string name="search">Поиск</string>
+    <string name="add">Добавить</string>
+    <string name="cancel">Отменить</string>
+    <string name="create">Создать</string>
+    <string name="more">Больше</string>
+    <string name="voice_input">Голосовой ввод</string>
+    <string name="add_to_favorites">Добавить в Избранное</string>
+    <string name="remove_from_favorites">Удалить из Избранного</string>
+    <string name="save">Сохранить</string>
+    <string name="add_image">Добавить изображение</string>
+    <string name="image_added">Изображение добавлено</string>
+    <!-- Radio -->
+    <string name="saving_station">Сохранить станцию</string>
+    <string name="nearby">Ближайшие</string>
+    <string name="radio">Радио</string>
+    <string name="add_station">Добавить свою станцию</string>
+    <string name="add_station_text">Введите название и ссылку на новую станцию</string>
+    <string name="search_stations">Поиск станций</string>
+    <string name="custom_station">Ссылка</string>
+    <!-- Playlists -->
+    <string name="add_to_playlist">Добавить в плейлист</string>
+    <string name="new_playlist">Новый плейлист</string>
+    <string name="new_playlist_desc">Введите название для нового плейлиста</string>
+    <string name="playlists">Плейлисты</string>
+    <!-- Albums -->
+    <string name="show_album">Показать альбом</string>
+    <string name="albums">Альбомы</string>
+    <!-- Artists -->
+    <string name="show_artist">Показать исполнителя</string>
+    <string name="no_biography">Нет биографии для этого исполнителя</string>
+    <string name="artist_about">Об исполнителе</string>
+    <string name="bio">Биография</string>
+    <string name="artists">Исполнители</string>
+    <!-- Songs -->
+    <string name="tracks">Песни</string>
+    <string name="songs">Песни</string>
+    <!-- Playlists -->
+    <string name="rename_playlist">Переименовать плейлист</string>
+    <string name="change_image">Изменить изображение</string>
+    <!-- Queue -->
+    <string name="play_next">Включить Следующую</string>
+    <string name="add_to_queue">Добавить в очередь</string>
+    <string name="nothing_up_next">Ничего в Следующем</string>
+    <string name="up_next">Следующее</string>
+    <string name="playing">Воспроизводится</string>
+    <string name="queue">Очередь</string>
+    <!-- Playback -->
+    <string name="connecting">Соединение</string>
+    <string name="connecting_device">Соединено с удаленным устройством</string>
+    <string name="share_this_track">Поделиться песней</string>
+    <string name="play">Воспроизвести</string>
+    <string name="shuffle">Перемешать</string>
+    <!-- About section -->
+    <string name="designer">Дизайнер</string>
+    <string name="developer">Разработчик</string>
+    <string name="created_by">Создано</string>
+    <string name="website">Веб-сайт</string>
+    <string name="thanks_to">Спасибо</string>
+    <string name="licenses">Лицензии</string>
+    <!-- Settings -->
+    <string name="lastfm_image_size_title">Размер изображения с Last.fm</string>
+    <string name="wipe_playlist_db">Сбросить изображения плейлистов</string>
+    <string name="wipe_playlist_db_sum">Удалит ваши изображения</string>
+    <string name="wipe_artists_db">Сбросить биографии и изображения исполнителей</string>
+    <string name="wipe_artists_db_sum">Удалит скачанные биографии и изображения</string>
+    <string name="wipe_radio_db">Сбросить сохраненные радио</string>
+    <string name="wipe_radio_db_sum">Удалит все сохраненные станции и их изображения</string>
+    <string name="pref_category_general">Общее</string>
+    <string name="pref_category_ui">Пользовательский интерфейс</string>
+    <!-- Permissions -->
+    <string name="storage_permission">Разрешение на память</string>
+    <string name="storage_permission_reason">Style Music необходимо разрешение для использования памяти чтобы сохранять и воспроизводить вашу музыку</string>
+</resources>

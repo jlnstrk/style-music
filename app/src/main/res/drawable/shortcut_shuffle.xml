@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2017 Julian Ostarek
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:viewportWidth="96"
+    android:viewportHeight="96"
+    android:width="96dp"
+    android:height="96dp">
+    <group android:translateY="-48">
+        <path
+            android:pathData="M92 96A44 44 0 0 1 48 140 44 44 0 0 1 4 96 44 44 0 0 1 48 52 44 44 0 0 1 92 96Z"
+            android:fillColor="#f5f5f5" />
+        <path
+            android:pathData="M45.17 90.34L34.83 80 32 82.83 42.34 93.17 45.17 90.34ZM53 80L57.09 84.09 32 109.17 34.83 112 59.92 86.91 64 91 64 80 53 80Zm0.66 18.83l-2.83 2.83 6.26 6.26 -4.09 4.08 11 0 0 -11 -4.09 4.09 -6.25 -6.26z"
+            android:fillColor="#607d8b" />
+    </group>
+</vector>

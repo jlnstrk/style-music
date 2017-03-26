@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2017 Julian Ostarek
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:viewportWidth="192"
+    android:viewportHeight="192"
+    android:width="192dp"
+    android:height="192dp">
+    <path
+        android:pathData="M183.999 96.000999A87.999001 87.999001 0 0 1 96 184 87.999001 87.999001 0 0 1 8.0009995 96.000999 87.999001 87.999001 0 0 1 96 8.0019989 87.999001 87.999001 0 0 1 183.999 96.000999Z"
+        android:fillColor="#eceff1" />
+    <path
+        android:pathData="M96 9.002c48.434 0 87.724 39.129 87.993 87.499 0.001 -0.167 0.006 -0.333 0.006 -0.5C184 47.4 144.602 8.002 96 8.002 47.4 8.002 8.001 47.4 8.001 96.001c0 0.167 0.006 0.333 0.006 0.5C8.278 48.131 47.567 9.002 96 9.002Z"
+        android:fillColor="#263238"
+        android:fillAlpha="0.03999999" />
+    <path
+        android:pathData="M96 183C47.566 183 8.276 143.871 8.007 95.5 8.006 95.668 8.001 95.834 8.001 96 8 144.602 47.398 184 96 184c48.601 0 87.999 -39.398 87.999 -88 0 -0.166 -0.006 -0.332 -0.006 -0.5C183.723 143.871 144.434 183 96 183Z"
+        android:fillColor="#263238"
+        android:fillAlpha="0.1" />
+    <path
+        android:pathData="M32 96l-12 0c-0.001 41.974 34.026 76 76 76.001l0 -12C60.654 160.001 32 131.346 32 96Z"
+        android:fillColor="#cfd8dc" />
+    <path
+        android:pathData="M160 96l12 0C172.001 54.028 137.974 20.001 96.001 20.001l0 12C131.347 32.001 160 60.655 160 96Z"
+        android:fillColor="#cfd8dc" />
+    <path
+        android:pathData="M136 96.000999A40 40 0 0 1 96 136.001 40 40 0 0 1 56 96.000999a40 40 0 0 1 40 -40 40 40 0 0 1 40 40z"
+        android:fillColor="#37474f" />
+    <path
+        android:pathData="M116 96.000999A20 20 0 0 1 96 116.001 20 20 0 0 1 76 96.000999a20 20 0 0 1 20 -20 20 20 0 0 1 20 20z"
+        android:fillColor="#607d8b" />
+    <path
+        android:pathData="M96 135.001c-21.923 0 -39.718 -17.64 -39.987 -39.5 -0.002 0.167 -0.013 0.332 -0.013 0.5 0 22.092 17.909 40 40 40 22.092 0 40 -17.908 40 -40 0 -0.167 -0.011 -0.333 -0.013 -0.5 -0.268 21.86 -18.063 39.5 -39.987 39.5z"
+        android:fillColor="#263238" />
+    <path
+        android:pathData="M96 57.001c21.924 0 39.719 17.64 39.987 39.5 0.002 -0.167 0.013 -0.332 0.013 -0.5 0 -22.091 -17.908 -40 -40 -40 -22.091 0 -40 17.909 -40 40 0 0.168 0.011 0.333 0.013 0.5 0.269 -21.86 18.064 -39.5 39.987 -39.5z"
+        android:fillColor="#ffffff"
+        android:fillAlpha="0.2" />
+</vector>

@@ -1,0 +1,79 @@
+<?xml version="1.0"?><!--
+  ~ Copyright 2017 Julian Ostarek
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<resources>
+    <!-- General -->
+    <string name="unknown">Άγνωστο</string>
+    <string name="favorites">Αγαπημένα</string>
+    <string name="minutes">Λεπτά</string>
+    <string name="all">Όλα</string>
+    <string name="Links">Επιπρόσθετοι σύνδεσμοι</string>
+    <string name="please_wait">Παρακαλώ περιμένετε</string>
+    <string name="last_added">Προστέθηκαν Τελευταία</string>
+    <string name="name">Όνομα</string>
+    <string name="link">Σύνδεσμος</string>
+    <string name="results">Αποτελέσματα</string>
+    <!-- Search -->
+    <!-- Section names -->
+    <string name="library">Βιβλιοθήκη</string>
+    <string name="folders">Φακέλοι</string>
+    <string name="other">Άλλα</string>
+    <string name="settings">Ρυθμίσεις</string>
+    <!-- General actions -->
+    <string name="ok">Οκ</string>
+    <string name="search">Αναζήτηση</string>
+    <string name="add">Προσθήκη</string>
+    <string name="cancel">Ακύρωση</string>
+    <string name="create">Δημιουργία</string>
+    <string name="more">Περισσότερα</string>
+    <string name="add_to_favorites">Προσθήκη στα Αγαπημένα</string>
+    <string name="save">Αποθήκευση</string>
+    <string name="add_image">Προσθήκη εικόνας</string>
+    <string name="image_added">Εικόνα προσθέσθηκε</string>
+    <!-- Radio -->
+    <string name="saving_station">Αποθήκευση σταθμού</string>
+    <string name="station_saved">Σταθμός αποθηκεύτικε</string>
+    <!-- Playlists -->
+    <string name="add_to_playlist">Προσθήκη σε Λίστα</string>
+    <string name="new_playlist">Νέα Λίστα</string>
+    <string name="new_playlist_desc">Προσθέστε όνομα για τη νέα λίστα</string>
+    <string name="playlists">Λίστες</string>
+    <!-- Albums -->
+    <string name="show_album">Εμφάνηση άλμπουμ</string>
+    <string name="albums">Άλμπουμ</string>
+    <!-- Artists -->
+    <string name="show_artist">Εμφάνηση Καλλιτέχνη</string>
+    <string name="no_biography">Δεν υπάρχει βιογραφία για τον καλλιτέχνη</string>
+    <string name="bio">Βιογραφία</string>
+    <string name="artists">Καλλιτέχνες</string>
+    <!-- Songs -->
+    <string name="tracks">Κομμάτια</string>
+    <string name="songs">Τραγούδια</string>
+    <!-- Playlists -->
+    <string name="rename_playlist">Μεταονομασία Λίστας</string>
+    <string name="change_image">Αλλαγή εικόνας</string>
+    <!-- Queue -->
+    <!-- Playback -->
+    <!-- About section -->
+    <!-- Settings -->
+    <string-array name="start_page">
+        <item>Σπίτι</item>
+        <item>Βιβλιοθήκη</item>
+        <item>Φακέλοι</item>
+    </string-array>
+    <string name="pref_category_general">Γενικά</string>
+    <!-- Permissions -->
+    <string name="artist">Καλλιτέχνης</string>
+</resources>

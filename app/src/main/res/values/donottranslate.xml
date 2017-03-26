@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2017 Julian Ostarek
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string-array name="allowed_network_type_keys">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="start_page_keys">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="lastfm_image_size_keys">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="lastfm_image_size">
+        <item>34 x 34</item>
+        <item>64 x 64</item>
+        <item>174 x 174</item>
+        <item>300 x 300</item>
+        <item>600 x 600</item>
+    </string-array>
+
+    <string name="pref_key_start_page">start_page</string>
+    <string name="pref_key_artist_metadata">artist_metadata</string>
+    <string name="pref_key_allowed_network_type">allowed_network_type</string>
+    <string name="pref_key_lastfm_image_size">lastfm_image_size</string>
+    <string name="pref_key_small_screen_mode">small_screen_mode</string>
+    <string name="pref_key_lockscreen_album_art">lockscreen_album_art</string>
+    <string name="pref_key_lockscreen_album_art_blur">lockscreen_album_art_blur</string>
+    <string name="pref_key_gapless_playback">gapless_playback</string>
+
+    <string name="pref_key_wipe_artists_db">wipe_artists_db</string>
+    <string name="pref_key_wipe_playlists_db">wipe_playlists_db</string>
+    <string name="pref_key_wipe_radio_db">wipe_radio_db</string>
+
+    <string name="transition_name_title">title</string>
+    <string name="transition_name_subtitle">subtitle</string>
+    <string name="transition_name_icon">icon</string>
+    <string name="transition_name_content">content</string>
+    <string name="transition_name_fab">floating_action_button</string>
+    <string name="transition_name_card">collapsedBar</string>
+    <string name="transition_name_background">background</string>
+    <string name="transition_name_image">image</string>
+
+</resources>

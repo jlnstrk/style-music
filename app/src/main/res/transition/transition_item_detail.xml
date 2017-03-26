@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2017 Julian Ostarek
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <targets>
+        <target android:excludeId="@android:id/navigationBarBackground" />
+    </targets>
+
+    <transitionSet>
+
+        <targets>
+            <target android:excludeName="@string/transition_name_title" />
+            <target android:excludeName="@string/transition_name_subtitle" />
+            <target android:excludeName="@string/transition_name_icon" />
+            <target android:excludeId="@android:id/statusBarBackground" />
+            <target android:excludeId="@id/activity_item_detail_image_gradient_top" />
+            <target android:excludeId="@id/activity_item_detail_toolbar" />
+            <target android:excludeId="@id/activity_item_detail_fab" />
+        </targets>
+
+        <slide
+            android:slideEdge="bottom"
+            android:interpolator="@android:interpolator/fast_out_slow_in" />
+
+    </transitionSet>
+
+    <fade android:interpolator="@android:interpolator/accelerate_cubic">
+
+        <targets>
+            <target android:targetName="@string/transition_name_title" />
+            <target android:targetName="@string/transition_name_subtitle" />
+            <target android:targetName="@string/transition_name_icon" />
+            <target android:targetId="@id/activity_item_detail_toolbar" />
+            <target android:targetId="@id/activity_item_detail_image_gradient_top" />
+            <target android:targetId="@android:id/statusBarBackground" />
+            <target android:targetId="@id/activity_item_detail_recycler_view" />
+        </targets>
+
+    </fade>
+
+</transitionSet>

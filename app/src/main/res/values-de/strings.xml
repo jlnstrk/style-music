@@ -1,0 +1,144 @@
+<?xml version="1.0"?><!--
+  ~ Copyright 2017 Julian Ostarek
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string name="app_name">Style Music</string>
+    <string name="app_description">Eine frische und schöne Art, Musik zu hören</string>
+    <!-- General -->
+    <string name="unknown">Unbekannt</string>
+    <string name="favorites">Favoriten</string>
+    <string name="minutes">Minuten</string>
+    <string name="all">Alle</string>
+    <string name="no_network">Keine Netzwerkverbindung!</string>
+    <string name="tag_editor">Tag-Editor</string>
+    <string name="Links">Weitere Links</string>
+    <string name="please_wait">Bitte warten</string>
+    <string name="last_added">Zuletzt hinzugefügt</string>
+    <string name="most_played">Am meisten gespielt</string>
+    <string name="name">Name</string>
+    <string name="link">Link</string>
+    <string name="results">Ergebnisse</string>
+    <string name="loading">Lädt...</string>
+    <string name="empty_text">Du hast keine</string>
+    <!-- Search -->
+    <string name="search_input_hint">Bibliothek durchsuchen</string>
+    <string name="search_motivation">Suche starten, um Ergebnisse zu erhalten</string>
+    <!-- Section names -->
+    <string name="home">Home</string>
+    <string name="library">Bibliothek</string>
+    <string name="folders">Ordner</string>
+    <string name="other">Sonstiges</string>
+    <string name="about">Über</string>
+    <string name="support">Unterstütze die Entwicklung</string>
+    <string name="settings">Einstellungen</string>
+    <!-- General actions -->
+    <string name="dismiss">Verwerfen</string>
+    <string name="ok">OK</string>
+    <string name="search">Suche</string>
+    <string name="add">Hinzufügen</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="create">Erstellen</string>
+    <string name="more">Mehr</string>
+    <string name="voice_input">Spracheingabe</string>
+    <string name="add_to_favorites">Zu Favoriten hinzufügen</string>
+    <string name="remove_from_favorites">Von Favoriten entfernen</string>
+    <string name="save">Speichern</string>
+    <string name="add_image">Bild hinzufügen</string>
+    <string name="image_added">Bild hinzugefügt</string>
+    <!-- Radio -->
+    <string name="saving_station">Station wird gespeichert</string>
+    <string name="station_saved">Station gespeichert</string>
+    <string name="problem_saving_station">Es ist ein Problem beim Speichern der Station aufgetreten</string>
+    <string name="nearby">In der Nähe</string>
+    <string name="radio">Radio</string>
+    <string name="add_station">Benutzerdefinierte Station hinzufügen</string>
+    <string name="add_station_text">Name und Link für die neue Station eingeben</string>
+    <string name="search_stations">Stationen suchen</string>
+    <string name="custom_station">Per Link</string>
+    <string name="saved">Gespeichert</string>
+    <string name="no_stations_saved">Keine Stationen gespeichert</string>
+    <!-- Playlists -->
+    <string name="add_to_playlist">Zu Playlist hinzufügen</string>
+    <string name="new_playlist">Neue Playlist</string>
+    <string name="new_playlist_desc">Benenne die neue Playlist</string>
+    <string name="playlists">Playlists</string>
+    <!-- Albums -->
+    <string name="show_album">Album anzeigen</string>
+    <string name="albums">Alben</string>
+    <!-- Artists -->
+    <string name="show_artist">Künstler anzeigen</string>
+    <string name="no_biography">Keine Biographie für diesen Künstler vorhanden</string>
+    <string name="artist_about">Über</string>
+    <string name="bio">Biographie</string>
+    <string name="artists">"Künstler "</string>
+    <!-- Songs -->
+    <string name="tracks">Songs</string>
+    <string name="songs">Songs</string>
+    <!-- Playlists -->
+    <string name="rename_playlist">Playlist umbenennen</string>
+    <string name="change_image">Bild ändern</string>
+    <!-- Queue -->
+    <string name="play_next">Als Nächstes abspielen</string>
+    <string name="add_to_queue">Zur Warteschlange hinzufügen</string>
+    <string name="nothing_up_next">Nichts nachfolgend</string>
+    <string name="up_next">Als nächstes</string>
+    <string name="playing">Spielt</string>
+    <string name="queue">Warteschlange</string>
+    <!-- Playback -->
+    <string name="connecting">Verbinde</string>
+    <string name="connecting_device">Verbinde zu Cast-Gerät</string>
+    <string name="share_this_track">Dieses Lied teilen</string>
+    <string name="google_cast">Google Cast</string>
+    <string name="play">Abspielen</string>
+    <string name="shuffle">Shuffle</string>
+    <!-- About section -->
+    <string name="google_plus">Google+</string>
+    <string name="github">Github</string>
+    <string name="designer">Designer</string>
+    <string name="developer">Entwickler</string>
+    <string name="created_by">Erstellt durch</string>
+    <string name="website">Webseite</string>
+    <string name="thanks_to">Vielen Dank an</string>
+    <string name="licenses">Lizenzen</string>
+    <string name="everything_else">Alles andere</string>
+    <!-- Settings -->
+    <string name="start_page_title">Startseite</string>
+    <string-array name="start_page">
+        <item>Home</item>
+        <item>Bibliothek</item>
+        <item>Ordner</item>
+    </string-array>
+    <string name="allowed_network_type_title">Gestattete Netzwerktypen</string>
+    <string-array name="allowed_network_type">
+        <item>WLAN</item>
+        <item>Mobile Daten</item>
+        <item>WLAN + Mobile Daten</item>
+    </string-array>
+    <string name="lastfm_image_size_title">Last.fm-Bildgröße</string>
+    <string name="wipe_playlist_db">Datenbank für Playlist-Bilder leeren</string>
+    <string name="wipe_playlist_db_sum">Deine Bilder werden dadurch nicht gelöscht</string>
+    <string name="wipe_artists_db">Datenbank für Biographien und Bilder leeren</string>
+    <string name="wipe_artists_db_sum">Deine heruntergeladenen Biographien und Bilder werden dadurch gelöscht</string>
+    <string name="wipe_radio_db">Datenbank für Radiosender leeren</string>
+    <string name="wipe_radio_db_sum">Deine gespeicherten Stationen und deren Bilder werden dadurch gelöscht</string>
+    <string name="pref_category_general">Allgemein</string>
+    <string name="pref_category_ui">Benutzeroberfläche</string>
+    <!-- Permissions -->
+    <string name="storage_permission">Speicher-Berechtigung</string>
+    <string name="storage_permission_reason">Style Music muss die Speicher-Berechtigung besitzen, um deine Musik auflisten und abspielen zu können</string>
+    <string name="find_station_for_song">Finde eine Station, die deinen Song spielt</string>
+    <string name="artist">Künstler</string>
+</resources>
