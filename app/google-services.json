@@ -1,1 +1,63 @@
-This is a dummy!
+{
+  "project_info": {
+    "project_number": "269610526035",
+    "firebase_url": "https://style-music.firebaseio.com",
+    "project_id": "style-music",
+    "storage_bucket": "style-music.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:269610526035:android:20a839d716c16834",
+        "android_client_info": {
+          "package_name": "de.julianostarek.music"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "269610526035-dmd1tiqus8ijcgu39k3eenl9dhkfjnan.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "de.julianostarek.music",
+            "certificate_hash": "3a290c81ac24a921308e2def2c18be2ea9425cee"
+          }
+        },
+        {
+          "client_id": "269610526035-i8u3svd01prvh6pcdovhsbl30ltad69h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "de.julianostarek.music",
+            "certificate_hash": "4fd63a12882e08e35e21c1add1f3d6df3b92266e"
+          }
+        },
+        {
+          "client_id": "269610526035-8v3m6mlo8voboiph0qab8orvkbash20b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnfHQh6hJiHS7OV-Seg87DnkiNJycCjzU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "269610526035-8v3m6mlo8voboiph0qab8orvkbash20b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
