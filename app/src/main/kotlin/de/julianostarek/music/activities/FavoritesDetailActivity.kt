@@ -16,6 +16,7 @@
 
 package de.julianostarek.music.activities
 
+import android.content.res.Configuration
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
@@ -50,16 +51,18 @@ class FavoritesDetailActivity : AppCompatActivity() {
     }
 
     private fun initRecyclerView(type: MusicType) {
-        UI.recyclerView.layoutManager = GridLayoutManager(this, if (type == MusicType.SONGS) 2 else 3)
-        UI.recyclerView.addItemDecoration(ItemDecorations.VerticalGridSpacing(this, if (type == MusicType.SONGS) 2 else 3, includeEdge = true))
-        UI.recyclerView.adapter = FavoritesDetailAdapter(type, this)
-        UI.recyclerView.viewTreeObserver.addOnPreDrawListener(object : ViewTreeObserver.OnPreDrawListener {
-            override fun onPreDraw(): Boolean {
-                UI.recyclerView.viewTreeObserver.removeOnPreDrawListener(this)
-                supportStartPostponedEnterTransition()
-                return true
-            }
-        })
+        UI.recyclerView.apply {
+            layoutManager = GridLayoutManager(this@FavoritesDetailActivity, if (type == MusicType.SONGS) if (resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT) 2 else 3 else if (resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT) 3 else 4)
+            addItemDecoration(ItemDecorations.VerticalGridSpacing(this@FavoritesDetailActivity, if (type == MusicType.SONGS) 2 else 3, includeEdge = true))
+            adapter = FavoritesDetailAdapter(type, this@FavoritesDetailActivity)
+            viewTreeObserver.addOnPreDrawListener(object : ViewTreeObserver.OnPreDrawListener {
+                override fun onPreDraw(): Boolean {
+                    viewTreeObserver.removeOnPreDrawListener(this)
+                    supportStartPostponedEnterTransition()
+                    return true
+                }
+            })
+        }
     }
 
 }

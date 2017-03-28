@@ -19,10 +19,8 @@
     android:id="@+id/fragment_radio_search_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:floatingSearch_leftActionMode="showHamburger"
     app:floatingSearch_menu="@menu/menu_radio"
-    app:floatingSearch_searchBarMarginLeft="4dp"
-    app:floatingSearch_searchBarMarginRight="4dp"
-    app:floatingSearch_searchBarMarginTop="4dp"
+    app:floatingSearch_searchBarMarginLeft="6dp"
+    app:floatingSearch_searchBarMarginRight="6dp"
     app:floatingSearch_searchHint="@string/search_stations"
     app:floatingSearch_showVoiceInput="true" />

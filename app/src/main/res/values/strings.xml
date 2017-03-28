@@ -177,4 +177,5 @@
     <string name="gapless_playback">Enable gapless playback</string>
     <string name="gapless_playback_sum">Switch between songs smoothly</string>
     <string name="delete_song">Delete song</string>
+    <string name="no_stations_found">No stations found</string>
 </resources>

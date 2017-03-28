@@ -29,8 +29,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import de.julianostarek.music.BuildConfig
+import de.julianostarek.music.activities.MainActivity
 import de.julianostarek.music.adapters.RadioStationsAdapter
 import de.julianostarek.music.anko.fragments.RadioUI
+import de.julianostarek.music.helper.AppColors
 import de.julianostarek.music.lib.radio.RadioAPI
 import de.julianostarek.music.provider.RadioStore
 import org.jetbrains.anko.AnkoContext
@@ -49,6 +51,12 @@ class RadioFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor> {
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         loaderManager.initLoader(0, null, this).forceLoad()
+        if (savedInstanceState != null) UI.onCollapsedStateChanged(false)
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        (activity as MainActivity).drawerLayout.setStatusBarBackgroundColor(AppColors.PRIMARY_DARK_COLOR)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

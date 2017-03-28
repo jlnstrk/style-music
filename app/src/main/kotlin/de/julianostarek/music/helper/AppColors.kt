@@ -19,7 +19,7 @@ package de.julianostarek.music.helper
 import android.graphics.Color
 
 object AppColors {
-    const val PRIMARY_DARK_COLOR = 0xFFE0E0E0.toInt()
+    const val PRIMARY_DARK_COLOR = 0xFFECEFF1.toInt()
     const val PRIMARY_COLOR = Color.WHITE
     const val ACCENT_COLOR = 0xFF607D8B.toInt()
     const val ACCENT_COLOR_LIGHT = 0xFF90A4AE.toInt()

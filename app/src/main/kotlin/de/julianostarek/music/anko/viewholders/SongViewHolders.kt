@@ -30,6 +30,8 @@ import android.widget.TextView
 import co.metalab.asyncawait.async
 import de.julianostarek.music.R
 import de.julianostarek.music.anko.constraintLayout
+import de.julianostarek.music.anko.horizontalSquareImageView
+import de.julianostarek.music.anko.verticalSquareImageView
 import de.julianostarek.music.extensions.getFavorites
 import de.julianostarek.music.helper.PopupHelper
 import mobile.substance.sdk.music.core.dataLinkers.MusicData
@@ -213,9 +215,7 @@ sealed class SongViewHolders {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) foreground = ta.getDrawable(0)
                     ta.recycle()
 
-                    image = imageView {
-                        adjustViewBounds = true
-                    }.lparams(wrapContent, matchParent)
+                    image = horizontalSquareImageView().lparams(wrapContent, matchParent)
                     title = textView {
                         leftPadding = dip(88)
                         rightPadding = dip(16)

@@ -18,7 +18,7 @@
 
     // Default app theme colors
     <color name="primary">#FFFFFF</color>
-    <color name="primary_dark">#E0E0E0</color>
+    <color name="primary_dark">#ECEFF1</color>
     <color name="accent">#607D8B</color>
     <color name="accent_light">#90A4AE</color>
     <color name="accent_dark">#455A64</color>

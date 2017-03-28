@@ -18,6 +18,7 @@ package de.julianostarek.music.activities
 
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
+import android.support.design.widget.Snackbar
 import android.support.design.widget.TextInputEditText
 import android.support.design.widget.TextInputLayout
 import android.support.v7.widget.Toolbar
@@ -48,6 +49,8 @@ class FindStationForSongActivity : PlaybackRemoteActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_find_station_for_song)
 
+        Toast.makeText(this, "This is still experimental!", Toast.LENGTH_LONG).show()
+
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = null
@@ -56,19 +59,20 @@ class FindStationForSongActivity : PlaybackRemoteActivity() {
             if (editTexts.any { it.text.toString().isEmpty() || it.text.toString().isBlank() }) {
                 editTexts.forEach {
                     if (it.text.toString().isEmpty() || it.text.toString().isBlank()) {
-                        ((it.parent as FrameLayout).parent as TextInputLayout).error = "You must provide the ${it.hint} of the song"
+                        ((it.parent as FrameLayout).parent as TextInputLayout).error = getString(R.string.must_not_be_empty)
                     }
                 }
             } else async {
                 val result = await { RadioAPI(BuildConfig.DARFM_KEY).getStationsMatchingMetadata(editTexts[0].text.toString(), editTexts[1].text.toString(), false) }
                 if (result == null || result.isEmpty()) {
-                    Toast.makeText(this@FindStationForSongActivity, "No stations are playing this song currently", Toast.LENGTH_SHORT).show()
+                    Snackbar.make(findViewById(android.R.id.content), getString(R.string.no_stations_found), Snackbar.LENGTH_SHORT).show()
                 } else {
                     val firstResult = result.first()
                     isListening = true
                     val wasActive = PlaybackRemote.isActive()
                     PlaybackRemote.play(DatabaseRadioStation(firstResult.name, firstResult.genre, null, firstResult.streamUrl()).toSong())
                     if (!wasActive) window.sharedElementReturnTransition = null
+                    supportFinishAfterTransition()
                 }
             }
         }
@@ -76,7 +80,7 @@ class FindStationForSongActivity : PlaybackRemoteActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         if (item?.itemId == android.R.id.home) {
-            finishAfterTransition()
+            supportFinishAfterTransition()
             return true
         }
         return super.onOptionsItemSelected(item)
