@@ -28,7 +28,7 @@ import de.julianostarek.music.anko.viewholders.UniversalViewHolder
 import mobile.substance.sdk.music.core.objects.*
 import org.jetbrains.anko.AnkoContext
 
-abstract class HorizontalMediaItemsAdapter(val context: Context) : RecyclerView.Adapter<UniversalViewHolder<*>>() {
+abstract class HorizontalMediaItemsAdapter(val context: Context, private val isThirdbig: Boolean = false) : RecyclerView.Adapter<UniversalViewHolder<*>>() {
     var items: List<MediaObject>? = null
 
     override fun onBindViewHolder(holder: UniversalViewHolder<*>?, position: Int) {
@@ -68,7 +68,7 @@ abstract class HorizontalMediaItemsAdapter(val context: Context) : RecyclerView.
     }
 
     override fun getItemViewType(position: Int): Int {
-        if (position == 0) return 0 else {
+        if (position == if (isThirdbig) 2 else 0) return 0 else {
             when (items!![position]) {
                 is Song,
                 is Album,

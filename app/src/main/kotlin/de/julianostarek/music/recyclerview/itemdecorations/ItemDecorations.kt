@@ -46,23 +46,40 @@ sealed class ItemDecorations {
         }
     }
 
-    class ThreeItemsStaggeredGrid(context: Context, private val spacing: Int = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4F, context.resources.displayMetrics).toInt()) : RecyclerView.ItemDecoration() {
+    class ThreeItemsStaggeredGrid(context: Context, private val isThirdBig: Boolean = false, private val spacing: Int = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4F, context.resources.displayMetrics).toInt()) : RecyclerView.ItemDecoration() {
 
         override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State?) {
             val position = parent.getChildAdapterPosition(view) // item position
 
-            if (position == 0) {
-                outRect.left = spacing
-                outRect.bottom = spacing
-                outRect.top = spacing
-            } else if (position % 2 == 0) {
-                outRect.top = spacing / 2
-                outRect.bottom = spacing
+            if (isThirdBig) {
+                if (position == 2) {
+                    outRect.top = spacing
+                    outRect.bottom = spacing
+                    outRect.right = spacing
+                } else if (position < 2) {
+                    outRect.left = spacing
+                    outRect.top = if (position == 0) spacing else spacing / 2
+                    outRect.bottom = if (position == 0) spacing / 2 else spacing
+                } else if (position % 2 == 0) {
+                    outRect.top = spacing / 2
+                    outRect.bottom = spacing
+                } else {
+                    outRect.top = spacing
+                    outRect.bottom = spacing / 2
+                }
             } else {
-                outRect.top = spacing
-                outRect.bottom = spacing / 2
+                if (position == 0) {
+                    outRect.left = spacing
+                    outRect.top = spacing
+                    outRect.bottom = spacing
+                } else if (position % 2 == 0) {
+                    outRect.top = spacing / 2
+                    outRect.bottom = spacing
+                } else {
+                    outRect.top = spacing
+                    outRect.bottom = spacing / 2
+                }
             }
-
             outRect.right = spacing
         }
     }

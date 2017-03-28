@@ -30,6 +30,7 @@ import android.view.ViewGroup
 import de.julianostarek.music.R
 import de.julianostarek.music.activities.AlbumActivity
 import de.julianostarek.music.anko.horizontalSquareImageView
+import de.julianostarek.music.anko.verticalSquareImageView
 import de.julianostarek.music.extensions.isCompletelyVisible
 import mobile.substance.sdk.music.core.dataLinkers.MusicData
 import mobile.substance.sdk.music.core.objects.Album
@@ -109,9 +110,8 @@ open class AlbumViewHolder(itemView: View, ui: UI, activity: AppCompatActivity) 
                 val ta = ctx.obtainStyledAttributes(arrayOf(android.R.attr.selectableItemBackground).toIntArray())
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) foreground = ta.getDrawable(0)
                 ta.recycle()
-                image = imageView {
+                image = verticalSquareImageView {
                     transitionName = ctx.getString(R.string.transition_name_image)
-                    adjustViewBounds = true
                 }.lparams(matchParent, wrapContent)
                 colorable = frameLayout {
                     transitionName = ctx.getString(R.string.transition_name_background)

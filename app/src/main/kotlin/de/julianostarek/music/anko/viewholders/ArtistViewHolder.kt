@@ -24,6 +24,7 @@ import android.support.v4.app.ActivityOptionsCompat
 import android.support.v4.util.Pair
 import android.support.v7.app.AppCompatActivity
 import android.text.TextUtils
+import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
 import de.julianostarek.music.R
@@ -64,11 +65,13 @@ class ArtistViewHolder(itemView: View, ui: UI, activity: AppCompatActivity) : Co
                 colorable = frameLayout {
                     transitionName = ctx.getString(R.string.transition_name_background)
                     title = textView {
-                        padding = dip(16)
+                        horizontalPadding = dip(16)
                         setTextAppearance(context, R.style.ItemTitleTextAppearance)
                         maxLines = 2
                         ellipsize = TextUtils.TruncateAt.END
-                    }.lparams(matchParent, matchParent)
+                    }.lparams(matchParent, wrapContent) {
+                        gravity = Gravity.CENTER_VERTICAL
+                    }
                 }.lparams(matchParent, dip(68))
             }
         }

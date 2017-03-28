@@ -28,7 +28,7 @@ android {
         StyleMusic {
             keyAlias 'StyleMusic'
             keyPassword 'jlntmstrk'
-            storeFile file('StyleMusic.jks')
+            storeFile file('../StyleMusic.jks')
             storePassword 'jlntmstrk'
         }
     }
@@ -78,7 +78,7 @@ android {
             // App use deadline of 1 week after build
             buildConfigField("String", "GOOGLE_PLAY_LICENSING_KEY", GOOGLE_PLAY_LICENSING_KEY)
             buildConfigField("boolean", "IS_PREVIEW", "true")
-            buildConfigField("double", "DEADLINE", "${System.currentTimeMillis().toDouble() + 604800000.0}")
+            buildConfigField("double", "DEADLINE", "${System.currentTimeMillis().toDouble() + 1814400000.0}")
             signingConfig signingConfigs.StyleMusic
         }
     }
@@ -92,24 +92,24 @@ dependencies {
     compile(name: 'radio_library', ext: 'aar')
     compile(name: 'mfb_library', ext: 'aar')
     // Music backend
-    compile('com.github.SubstanceMobile.SDK:dynamic-colors:e2cc983@aar') {
+    compile('com.github.SubstanceMobile.SDK:dynamic-colors:8a0482b@aar') {
         transitive = true
     }
-    compile('com.github.SubstanceMobile.SDK:music-core:e2cc983@aar') {
+    compile('com.github.SubstanceMobile.SDK:music-core:8a0482b@aar') {
         transitive = true
     }
-    compile('com.github.SubstanceMobile.SDK:music-loading:e2cc983@aar') {
+    compile('com.github.SubstanceMobile.SDK:music-loading:8a0482b@aar') {
         transitive = true
     }
-    compile('com.github.SubstanceMobile.SDK:music-playback:e2cc983@aar') {
+    compile('com.github.SubstanceMobile.SDK:music-playback:8a0482b@aar') {
         transitive = true
     }
-    compile('com.github.SubstanceMobile.SDK:music-tags:e2cc983@aar') {
+    compile('com.github.SubstanceMobile.SDK:music-tags:8a0482b@aar') {
         transitive = true
     }
     // Firebase / Google stuff
     compile "com.google.firebase:firebase-core:$project.firebaseVersion"
-    compile "com.google.firebase:firebase-crash:$project.firebaseVersion"
+    //compile "com.google.firebase:firebase-crash:$project.firebaseVersion"
     // Android support libraries
     compile "com.android.support:appcompat-v7:$project.supportLibraryVersion"
     compile "com.android.support:cardview-v7:$project.supportLibraryVersion"

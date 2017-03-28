@@ -17,12 +17,16 @@
 package de.julianostarek.music.adapters
 
 import android.content.Context
+import co.metalab.asyncawait.async
 import mobile.substance.sdk.music.core.dataLinkers.MusicData
 
-class LastAddedAdapter(context: Context) : HorizontalMediaItemsAdapter(context) {
+class LastAddedAdapter(context: Context) : HorizontalMediaItemsAdapter(context, true) {
 
     init {
-        items = MusicData.getLastAddedObjects()
+        async {
+            items = await { MusicData.getLastAddedObjects() }
+            notifyDataSetChanged()
+        }
     }
 
 }

@@ -21,10 +21,7 @@ import android.content.res.Configuration
 import android.support.design.widget.AppBarLayout
 import android.support.design.widget.CoordinatorLayout
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
-import android.support.v7.widget.StaggeredGridLayoutManager
-import android.support.v7.widget.Toolbar
+import android.support.v7.widget.*
 import android.util.TypedValue
 import android.view.View
 import android.view.ViewGroup
@@ -107,7 +104,6 @@ class HomeUI : AnkoComponent<HomeFragment> {
                     SongsSuggester(activity)
                 } else MostPlayedAdapter(activity)
             } else LastAddedAdapter(activity))
-
         }
 
         override fun getItemCount(): Int {
@@ -115,16 +111,20 @@ class HomeUI : AnkoComponent<HomeFragment> {
         }
 
         override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): UniversalViewHolder<*> {
-            val ui = if (viewType == 2) EmptyStateViewHolder.UI(0) else ListSection.ViewHolder.UI()
-            return if (viewType == 2) {
+            val ui = if (viewType == 0) EmptyStateViewHolder.UI(0) else ListSection.ViewHolder.UI()
+            return if (viewType == 0) {
                 EmptyStateViewHolder(ui.createView(AnkoContext.create(activity, parent!!)), ui as EmptyStateViewHolder.UI, activity)
-            } else {
-                ListSection.ViewHolder(ui.createView(AnkoContext.create(parent!!.context, parent)), ui as ListSection.ViewHolder.UI,
-                        if (activity.resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT) activity.dip(12) + (activity.resources.displayMetrics.widthPixels - activity.dip(16)) / 3 * 2 else activity.dip(12) + (activity.resources.displayMetrics.widthPixels - activity.dip(24)) / 5 * 2,
-                        if (viewType == 0) StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.HORIZONTAL) else LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false),
-                        if (viewType == 0) ItemDecorations.ThreeItemsStaggeredGrid(activity) else ItemDecorations.HorizontalLinearSpacing(activity), activity).apply {
-                    (ui as ListSection.ViewHolder.UI).button.visibility = View.GONE
-                }
+            } else ListSection.ViewHolder(ui.createView(AnkoContext.create(parent!!.context, parent)), ui as ListSection.ViewHolder.UI,
+                    if (activity.resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT) activity.dip(12) + (activity.resources.displayMetrics.widthPixels - activity.dip(16)) / 3 * 2 else activity.dip(12) + (activity.resources.displayMetrics.widthPixels - activity.dip(24)) / 5 * 2,
+                    if (viewType == 2 || viewType == 3) GridLayoutManager(activity, 2, GridLayoutManager.HORIZONTAL, false).apply {
+                        spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
+                            override fun getSpanSize(position: Int): Int {
+                                return if (viewType == 2 && position == 0 || viewType == 3 && position == 2) this@apply.spanCount else 1
+                            }
+                        }
+                    } else LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false),
+                    if (viewType == 2 || viewType == 3) ItemDecorations.ThreeItemsStaggeredGrid(activity, viewType == 3) else ItemDecorations.HorizontalLinearSpacing(activity), activity).apply {
+                (ui as ListSection.ViewHolder.UI).button.visibility = View.GONE
             }
         }
 
@@ -135,12 +135,12 @@ class HomeUI : AnkoComponent<HomeFragment> {
                     1
                 } else if (MusicData.getSongs().isEmpty()) {
                     suggestSongs = false
-                    2
+                    0
                 } else {
                     suggestSongs = false
-                    0
+                    2
                 }
-            } else 0
+            } else 3
         }
 
     }

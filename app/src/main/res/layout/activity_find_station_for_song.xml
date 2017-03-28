@@ -26,6 +26,7 @@
         android:id="@+id/activity_find_station_for_song_app_bar_layout"
         android:background="@android:color/transparent"
         app:expanded="false"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

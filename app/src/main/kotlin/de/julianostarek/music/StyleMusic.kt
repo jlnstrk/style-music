@@ -192,6 +192,7 @@ class StyleMusic : Application(), PlaybackRemote.RemoteCallback, MediaLoader.Tas
 
     private fun init() {
         MusicCoreOptions.apply {
+            glidePreferPlaceholder = true
             defaultArt = R.drawable.placeholder_album
             defaultArtUrl = "https://style-music.firebaseapp.com/default_artwork.png"
         }

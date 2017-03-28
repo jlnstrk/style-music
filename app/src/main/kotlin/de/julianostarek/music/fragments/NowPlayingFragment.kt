@@ -95,6 +95,7 @@ class NowPlayingFragment : BaseFragment(), Toolbar.OnMenuItemClickListener, Seek
     val bottomSheetBehavior: BottomSheetBehavior<CardView> by lazy {
         BottomSheetBehavior.from(queueCardView)
     }
+    val bottomSheetCallback = BottomSheetCallbackImpl()
 
     val queue: RecyclerView by bindView<RecyclerView>(R.id.fragment_nowplaying_queue)
     var touchHelper: ItemTouchHelper? = null
@@ -172,7 +173,7 @@ class NowPlayingFragment : BaseFragment(), Toolbar.OnMenuItemClickListener, Seek
         imageViews[0].imageTintList = if (mode != PlaybackStateCompat.REPEAT_MODE_NONE) ColorStateList.valueOf(mainActivity().tintColor) else null
     }
 
-    override fun init() {
+    override fun init(savedInstanceState: Bundle?) {
         initToolbar()
         initQueue()
 
@@ -186,6 +187,14 @@ class NowPlayingFragment : BaseFragment(), Toolbar.OnMenuItemClickListener, Seek
         initSeekBars()
     }
 
+    override fun onViewStateRestored(savedInstanceState: Bundle?) {
+        super.onViewStateRestored(savedInstanceState)
+        if (savedInstanceState != null && bottomSheetBehavior.state == BottomSheetBehavior.STATE_EXPANDED) {
+            bottomSheetCallback.onSlide(queueCardView, 1.0F)
+            bottomSheetCallback.onStateChanged(queueCardView, bottomSheetBehavior.state)
+        }
+    }
+
     private fun initBottomSheet(isSmallScreenMode: Boolean) {
         queueCardView.setOnClickListener(this)
         val isLandscape = resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE
@@ -196,8 +205,7 @@ class NowPlayingFragment : BaseFragment(), Toolbar.OnMenuItemClickListener, Seek
         bottomSheetBehavior.apply {
             isHideable = false
             skipCollapsed = false
-            state = BottomSheetBehavior.STATE_COLLAPSED
-            setBottomSheetCallback(BottomSheetCallbackImpl())
+            setBottomSheetCallback(bottomSheetCallback)
             val realDisplayMetrics = DisplayMetrics()
             activity.windowManager.defaultDisplay.getMetrics(realDisplayMetrics)
             if (!isLandscape) {

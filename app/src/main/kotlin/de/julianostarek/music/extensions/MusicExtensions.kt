@@ -28,8 +28,8 @@ import mobile.substance.sdk.music.core.objects.Song
 
 fun Song.requestArt(imageView: ImageView) = MusicData.findAlbumById(songAlbumId!!)?.requestArt(imageView)
 
-fun Artist.requestArt(imageView: ImageView) = Glide.with(imageView.context).load(artistImagePath).placeholder(R.drawable.placeholder_artist).crossFade().centerCrop().into(imageView)
+fun Artist.requestArt(imageView: ImageView) = Glide.with(imageView.context).load(artistImagePath).error(R.drawable.placeholder_artist).crossFade().centerCrop().into(imageView)
 
 fun Playlist.requestArt(imageView: ImageView) = async {
-    Glide.with(imageView.context).load(await { MetadataHelper.getPath(imageView.context, id, Playlist::class.java.simpleName.toLowerCase()) }).placeholder(R.drawable.placeholder_playlist).crossFade().centerCrop().into(imageView)
+    Glide.with(imageView.context).load(await { MetadataHelper.getPath(imageView.context, id, Playlist::class.java.simpleName.toLowerCase()) }).error(R.drawable.placeholder_playlist).crossFade().centerCrop().into(imageView)
 }
